@@ -1,254 +1,70 @@
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #F5F5DC;
-  color: #333;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F5DC;
+    color: #333;
 }
 
 header {
-  background-color: #6E6E6E;
-  color: #D4AF37;
-  padding: 1rem;
-  text-align: center;
+    background-color: #6E6E6E;
+    color: #D4AF37;
+    padding: 1rem;
+    text-align: center;
 }
 
 nav a {
-  margin: 0 1rem;
-  color: #F5F5DC;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-nav a:hover {
-  background-color: rgba(212, 175, 55, 0.3);
-}
-
-nav a.active {
-  background-color: #D4AF37;
-  color: #333;
+    margin: 0 1rem;
+    color: #F5F5DC;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 main {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 section {
-  background: #fff;
-  border-left: 5px solid #D4AF37;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff;
+    border-left: 5px solid #D4AF37;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 input, select, button {
-  margin-top: 0.5rem;
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type="time"], input[type="number"] {
-  max-width: 200px;
+    margin-top: 0.5rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
 }
 
 button {
-  background-color: #D4AF37;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #B8941F;
+    background-color: #D4AF37;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
 .staff-list li {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  background-color: #F5F5DC;
-  border-left: 3px solid #6E6E6E;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #F5F5DC;
+    border-left: 3px solid #6E6E6E;
 }
 
 @media (max-width: 600px) {
-  main {
-    padding: 1rem;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    margin: 0.5rem;
-  }
-}
-
-/* Availability Grid Styles */
-.availability-grid {
-  display: grid;
-  grid-template-columns: 100px repeat(7, 1fr);
-  gap: 1px;
-  background-color: #ddd;
-  margin-top: 1rem;
-  border: 1px solid #ddd;
-}
-
-.day-headers {
-  display: contents;
-}
-
-.day-headers > div {
-  background-color: #6E6E6E;
-  color: #F5F5DC;
-  padding: 0.5rem;
-  text-align: center;
-  font-weight: 600;
-}
-
-.time-slot {
-  background-color: #fff;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.availability-cell {
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.availability-cell.available {
-  background-color: #90EE90;
-}
-
-.availability-cell.unavailable {
-  background-color: #FFB6C1;
-}
-
-/* Task List Styles */
-.task-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
-  padding: 0.75rem;
-  background-color: #F5F5DC;
-  border-left: 3px solid #6E6E6E;
-  border-radius: 4px;
-}
-
-.task-info {
-  flex-grow: 1;
-}
-
-.task-minutes {
-  background-color: #D4AF37;
-  color: #fff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-}
-
-.delete-btn:hover {
-  background-color: #c82333;
-}
-
-/* Roster Display Styles */
-.roster-display {
-  margin-top: 1rem;
-}
-
-.day-roster {
-  margin-bottom: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.day-header {
-  background-color: #6E6E6E;
-  color: #F5F5DC;
-  padding: 1rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.staff-assignments {
-  padding: 1rem;
-}
-
-.staff-assignment {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.staff-assignment:last-child {
-  border-bottom: none;
-}
-
-.staff-name {
-  font-weight: 600;
-  color: #333;
-}
-
-.assigned-tasks {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.total-hours {
-  color: #D4AF37;
-  font-weight: 600;
-}
-
-/* Schedule Controls */
-.schedule-controls {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.schedule-controls button {
-  flex: 1;
-  max-width: 200px;
-}
-
-/* Staff Selector */
-.staff-selector {
-  margin-bottom: 1rem;
-}
-
-.staff-selector select {
-  max-width: 300px;
+    main {
+        padding: 1rem;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        margin: 0.5rem;
+    }
 }
